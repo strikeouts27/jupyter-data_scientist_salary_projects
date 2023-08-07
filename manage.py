@@ -20,3 +20,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""
+Our class of tests is called UsersManagersTests and extends TestCase. The first unit test, test_-
+create_user, checks that a regular user displays expected behavior. 
+
+
+The second unit test, test_-create_superuser, does the same, albeit for a superuser account.
+
+"""
