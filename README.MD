@@ -1,8 +1,6 @@
+Django For Beginners Reference Material:
 
-
-Django For Beginners Reference Material: 
-
-Django has a built in model called User that has some fields already created. 
+Django has a built in model called User that has some fields already created.
 User model: https://docs.djangoproject.com/en/4.2/ref/contrib/auth/#django.contrib.auth.models.User
 
 The second approach, to create a custom user model, is recommended in the official Django
@@ -18,6 +16,7 @@ steps of creating and navigating to a new directory called news and installing a
 virtual environment called .venv
 
 # macOS
+
 $ cd ~/desktop/code
 $ mkdir news
 $ cd news
@@ -33,9 +32,9 @@ new app called accounts.
 (.venv) $ django-admin startproject django_project .
 (.venv) $ python manage.py startapp accounts
 
+# Forms.py
 
-# Forms.py 
------
+---
 
 How would Users be created in our program? When a user creates a new account and when an admin creates an account. We use UserCreationForm and UserChangeForm which are built in Django Forms for this purpose.
 
@@ -53,14 +52,17 @@ like age, we must add fieldsets171. And to include a new custom field in the sec
 new user we rely on add_fieldsets.
 
 # tests.py
+
 get_user_model()¶
 
 At the top, we import get_user_model()176, so we can test our user registration. Then we also
 import TestCase to run tests that touch the database and reverse so we can verify the URL and
 view work properly.
+# https://docs.djangoproject.com/en/4.2/topics/auth/customizing/#django.contrib.auth.get_user_model
 
-Our class of tests is called UsersManagersTests and extends TestCase. The first unit test, test_-
-create_user, checks that a regular user displays expected behavior. 
+Our class of tests is called UsersManagersTests and extends TestCase. The first unit test, test\_-
+create_user, checks that a regular user displays expected behavior.
+
+The second unit test, test\_-create_superuser, does the same, albeit for a superuser account.
 
 
-The second unit test, test_-create_superuser, does the same, albeit for a superuser account.
